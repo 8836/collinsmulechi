@@ -145,13 +145,9 @@ function RootComponent() {
                   {item.label}
                 </Link>
               ))}
-              <a
-                href="/Collins-Murakayo-Mulechi-Data-Analyst-Resume.pdf"
-                download
-                className="ml-2 link-cta"
-              >
-                Resume (PDF)
-              </a>
+              <Link to="/resumes" className="ml-2 link-cta">
+                Download resumes
+              </Link>
             </nav>
           </div>
         </header>
