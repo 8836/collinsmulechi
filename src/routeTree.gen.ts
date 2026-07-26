@@ -9,16 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VirtualAssistantRouteImport } from './routes/virtual-assistant'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ScriptwriterRouteImport } from './routes/scriptwriter'
 import { Route as ResumesRouteImport } from './routes/resumes'
 import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as GraphicDesignerRouteImport } from './routes/graphic-designer'
 import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as DataAnalystRouteImport } from './routes/data-analyst'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VirtualAssistantRoute = VirtualAssistantRouteImport.update({
+  id: '/virtual-assistant',
+  path: '/virtual-assistant',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScriptwriterRoute = ScriptwriterRouteImport.update({
+  id: '/scriptwriter',
+  path: '/scriptwriter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResumesRoute = ResumesRouteImport.update({
@@ -31,9 +45,19 @@ const ProjectsRoute = ProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GraphicDesignerRoute = GraphicDesignerRouteImport.update({
+  id: '/graphic-designer',
+  path: '/graphic-designer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExperienceRoute = ExperienceRouteImport.update({
   id: '/experience',
   path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataAnalystRoute = DataAnalystRouteImport.update({
+  id: '/data-analyst',
+  path: '/data-analyst',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -50,71 +74,113 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/data-analyst': typeof DataAnalystRoute
   '/experience': typeof ExperienceRoute
+  '/graphic-designer': typeof GraphicDesignerRoute
   '/projects': typeof ProjectsRoute
   '/resumes': typeof ResumesRoute
+  '/scriptwriter': typeof ScriptwriterRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/virtual-assistant': typeof VirtualAssistantRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/data-analyst': typeof DataAnalystRoute
   '/experience': typeof ExperienceRoute
+  '/graphic-designer': typeof GraphicDesignerRoute
   '/projects': typeof ProjectsRoute
   '/resumes': typeof ResumesRoute
+  '/scriptwriter': typeof ScriptwriterRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/virtual-assistant': typeof VirtualAssistantRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/data-analyst': typeof DataAnalystRoute
   '/experience': typeof ExperienceRoute
+  '/graphic-designer': typeof GraphicDesignerRoute
   '/projects': typeof ProjectsRoute
   '/resumes': typeof ResumesRoute
+  '/scriptwriter': typeof ScriptwriterRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/virtual-assistant': typeof VirtualAssistantRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/contact'
+    | '/data-analyst'
     | '/experience'
+    | '/graphic-designer'
     | '/projects'
     | '/resumes'
+    | '/scriptwriter'
     | '/sitemap.xml'
+    | '/virtual-assistant'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/contact'
+    | '/data-analyst'
     | '/experience'
+    | '/graphic-designer'
     | '/projects'
     | '/resumes'
+    | '/scriptwriter'
     | '/sitemap.xml'
+    | '/virtual-assistant'
   id:
     | '__root__'
     | '/'
     | '/contact'
+    | '/data-analyst'
     | '/experience'
+    | '/graphic-designer'
     | '/projects'
     | '/resumes'
+    | '/scriptwriter'
     | '/sitemap.xml'
+    | '/virtual-assistant'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  DataAnalystRoute: typeof DataAnalystRoute
   ExperienceRoute: typeof ExperienceRoute
+  GraphicDesignerRoute: typeof GraphicDesignerRoute
   ProjectsRoute: typeof ProjectsRoute
   ResumesRoute: typeof ResumesRoute
+  ScriptwriterRoute: typeof ScriptwriterRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  VirtualAssistantRoute: typeof VirtualAssistantRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/virtual-assistant': {
+      id: '/virtual-assistant'
+      path: '/virtual-assistant'
+      fullPath: '/virtual-assistant'
+      preLoaderRoute: typeof VirtualAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scriptwriter': {
+      id: '/scriptwriter'
+      path: '/scriptwriter'
+      fullPath: '/scriptwriter'
+      preLoaderRoute: typeof ScriptwriterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resumes': {
@@ -131,11 +197,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/graphic-designer': {
+      id: '/graphic-designer'
+      path: '/graphic-designer'
+      fullPath: '/graphic-designer'
+      preLoaderRoute: typeof GraphicDesignerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/experience': {
       id: '/experience'
       path: '/experience'
       fullPath: '/experience'
       preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data-analyst': {
+      id: '/data-analyst'
+      path: '/data-analyst'
+      fullPath: '/data-analyst'
+      preLoaderRoute: typeof DataAnalystRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -158,21 +238,15 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  DataAnalystRoute: DataAnalystRoute,
   ExperienceRoute: ExperienceRoute,
+  GraphicDesignerRoute: GraphicDesignerRoute,
   ProjectsRoute: ProjectsRoute,
   ResumesRoute: ResumesRoute,
+  ScriptwriterRoute: ScriptwriterRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  VirtualAssistantRoute: VirtualAssistantRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

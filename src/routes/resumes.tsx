@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { resumeTracks, creativeWork, socials } from "../data/resumes";
+
 
 export const Route = createFileRoute("/resumes")({
   head: () => ({
@@ -46,9 +47,18 @@ function Resumes() {
                 </li>
               ))}
             </ul>
-            <a href={r.file} download className="link-cta mt-5 self-start">
-              Download PDF
-            </a>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <a href={r.file} download className="link-cta">
+                Download PDF
+              </a>
+              <Link
+                to={`/${r.slug}` as "/data-analyst"}
+                className="link-cta-ghost"
+              >
+                View page
+              </Link>
+            </div>
+
           </article>
         ))}
       </div>
