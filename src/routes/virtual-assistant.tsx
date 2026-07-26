@@ -1,0 +1,20 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { TrackPage } from "../components/TrackPage";
+import { trackBySlug } from "../data/tracks";
+
+const track = trackBySlug("virtual-assistant");
+
+export const Route = createFileRoute("/virtual-assistant")({
+  head: () => ({
+    meta: [
+      { title: track.seo.title },
+      { name: "description", content: track.seo.description },
+      { property: "og:title", content: track.seo.title },
+      { property: "og:description", content: track.seo.description },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/virtual-assistant" },
+    ],
+    links: [{ rel: "canonical", href: "/virtual-assistant" }],
+  }),
+  component: () => <TrackPage track={track} />,
+});
