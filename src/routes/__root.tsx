@@ -72,15 +72,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Collins Murakayo Mulechi — Data Analyst" },
+      { title: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
       {
         name: "description",
         content:
-          "Data analyst portfolio of Collins Murakayo Mulechi: Excel, Power BI, SQL reporting and business operations work in Nairobi, Kenya.",
+          "Data analyst in Nairobi specialising in Excel and Power BI reporting, data cleaning, SQL fundamentals, and operational business systems.",
       },
       { name: "author", content: profile.name },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
+      { name: "twitter:title", content: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
+      { property: "og:description", content: "Data analyst in Nairobi specialising in Excel and Power BI reporting, data cleaning, SQL fundamentals, and operational business systems." },
+      { name: "twitter:description", content: "Data analyst in Nairobi specialising in Excel and Power BI reporting, data cleaning, SQL fundamentals, and operational business systems." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc41effa-4389-4d3b-85f7-6914d88cc1bb" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc41effa-4389-4d3b-85f7-6914d88cc1bb" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

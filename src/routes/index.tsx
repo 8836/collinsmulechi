@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Excel and Power BI reporting, data validation, SQL fundamentals, and business operations analytics.",
+          "Data analyst in Nairobi specialising in Excel and Power BI reporting, data cleaning, SQL fundamentals, and operational business systems.",
       },
     ],
   }),
