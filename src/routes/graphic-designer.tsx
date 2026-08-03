@@ -12,9 +12,9 @@ export const Route = createFileRoute("/graphic-designer")({
       { property: "og:title", content: track.seo.title },
       { property: "og:description", content: track.seo.description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/graphic-designer" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/graphic-designer" },
     ],
-    links: [{ rel: "canonical", href: "/graphic-designer" }],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/graphic-designer" }],
   }),
   component: () => <TrackPage track={track} />,
 });

@@ -12,9 +12,9 @@ export const Route = createFileRoute("/data-analyst")({
       { property: "og:title", content: track.seo.title },
       { property: "og:description", content: track.seo.description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/data-analyst" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/data-analyst" },
     ],
-    links: [{ rel: "canonical", href: "/data-analyst" }],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/data-analyst" }],
   }),
   component: () => <TrackPage track={track} />,
 });
