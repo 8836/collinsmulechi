@@ -80,6 +80,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: profile.name },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: profile.name },
+      { property: "og:locale", content: "en_KE" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
       { name: "twitter:title", content: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
