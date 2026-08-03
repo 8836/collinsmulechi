@@ -149,3 +149,33 @@ export const strengths = [
   "Detail-oriented across data and visual output",
   "Clear analytical communication in professional English",
 ];
+
+export const atAGlance = [
+  { value: "4+ yrs", label: "Operational data & reporting experience" },
+  { value: "4", label: "Roles across retail, print production and research" },
+  { value: "4", label: "ATS-ready resume tracks, one verified history" },
+  { value: "BSc", label: "Software Engineering, completing Dec 2026" },
+];
+
+export const howIWork = [
+  {
+    step: "01",
+    title: "Find the source of truth",
+    body: "Before any dashboard, I trace where each number actually comes from — the cash book, the stock sheet, the production log — and fix the entry points first.",
+  },
+  {
+    step: "02",
+    title: "Clean and validate",
+    body: "Standardise formats, remove duplicates, reconcile against physical or transactional records, and add checks that catch bad entries early.",
+  },
+  {
+    step: "03",
+    title: "Report what gets acted on",
+    body: "Excel and Power BI views built around the decisions people actually make — stock movement, campaign status, deliverable timelines.",
+  },
+  {
+    step: "04",
+    title: "Document it",
+    body: "SOPs and process notes so the workflow survives handover and does not live in one person's head.",
+  },
+];
