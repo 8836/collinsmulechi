@@ -1,20 +1,48 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { profile, skills, education, strengths } from "../data/resume";
+import { profile, skills, education, strengths, atAGlance, howIWork } from "../data/resume";
+import { resumeTracks } from "../data/resumes";
+
+const title = "Collins Murakayo Mulechi — Data Analyst in Nairobi";
+const description =
+  "Data analyst in Nairobi with 4+ years turning operational records into trusted reporting: Excel and Power BI dashboards, data cleaning and validation, SQL fundamentals, and documented business systems.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/" }],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Data analyst in Nairobi specialising in Excel and Power BI reporting, data cleaning, SQL fundamentals, and operational business systems.",
-      },
-      { property: "og:title", content: "Collins Murakayo Mulechi — Data Analyst Portfolio" },
-      {
-        property: "og:description",
-        content:
-          "Data analyst in Nairobi specialising in Excel and Power BI reporting, data cleaning, SQL fundamentals, and operational business systems.",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          mainEntity: {
+            "@type": "Person",
+            name: profile.name,
+            jobTitle: "Data Analyst",
+            email: `mailto:${profile.email}`,
+            telephone: profile.phone,
+            url: "https://collinsmulechi.lovable.app/",
+            address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
+            sameAs: [profile.linkedin, profile.github],
+            alumniOf: { "@type": "CollegeOrUniversity", name: education.school },
+            knowsAbout: [
+              "Data analysis",
+              "Microsoft Excel",
+              "Power BI",
+              "SQL",
+              "Business systems",
+              "Process documentation",
+            ],
+          },
+        }),
       },
     ],
   }),
@@ -23,30 +51,77 @@ export const Route = createFileRoute("/")({
 
 function Overview() {
   return (
-    <div className="space-y-16">
-      <section>
+    <div className="space-y-20">
+      <section className="hero-glow rise">
         <p className="label-mono">Nairobi, Kenya · Open to data analyst roles</p>
-        <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
-          I turn messy operational records into reporting people actually trust.
+        <h1 className="mt-4 text-4xl font-bold leading-[1.08] sm:text-6xl">
+          <span className="text-gradient">
+            I turn messy operational records into reporting people actually trust.
+          </span>
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
           {profile.summary}
         </p>
-        <div className="mt-7 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           <a href="/Collins-Murakayo-Mulechi-Data-Analyst-Resume.pdf" download className="link-cta">
             Download ATS resume
           </a>
           <Link to="/experience" className="link-cta-ghost">
             View experience
           </Link>
+          <Link to="/contact" className="link-cta-ghost">
+            Hire me
+          </Link>
+        </div>
+
+        <dl className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {atAGlance.map((s) => (
+            <div key={s.label} className="panel panel-hover p-5">
+              <dt className="stat-value">{s.value}</dt>
+              <dd className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section>
+        <h2 className="label-mono rule-heading">Hire me for</h2>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {resumeTracks.map((t) => (
+            <Link
+              key={t.slug}
+              to={`/${t.slug}` as "/data-analyst"}
+              className="panel panel-hover block p-6"
+            >
+              <h3 className="font-display text-lg font-semibold">{t.title}</h3>
+              <p className="mt-1 text-sm text-primary">{t.subtitle}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.blurb}</p>
+              <span className="mt-4 inline-block font-mono text-xs text-accent">
+                View this track →
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 
       <section>
-        <h2 className="label-mono">Core skills</h2>
+        <h2 className="label-mono rule-heading">How I work</h2>
+        <ol className="mt-5 grid gap-4 md:grid-cols-2">
+          {howIWork.map((s) => (
+            <li key={s.step} className="panel panel-hover p-6">
+              <span className="font-mono text-xs text-accent">{s.step}</span>
+              <h3 className="mt-2 font-display text-base font-semibold">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section>
+        <h2 className="label-mono rule-heading">Core skills</h2>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
           {skills.map((group) => (
-            <div key={group.group} className="panel p-5">
+            <div key={group.group} className="panel panel-hover p-5">
               <h3 className="font-display text-sm font-semibold text-primary">{group.group}</h3>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 {group.items.map((item) => (
@@ -59,7 +134,7 @@ function Overview() {
       </section>
 
       <section className="grid gap-4 md:grid-cols-2">
-        <div className="panel p-6">
+        <div className="panel panel-hover p-6">
           <h2 className="label-mono">Education</h2>
           <h3 className="mt-3 font-display text-lg font-semibold">{education.degree}</h3>
           <p className="text-sm text-muted-foreground">
@@ -77,7 +152,7 @@ function Overview() {
             ))}
           </ul>
         </div>
-        <div className="panel p-6">
+        <div className="panel panel-hover p-6">
           <h2 className="label-mono">Strengths</h2>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             {strengths.map((s) => (
@@ -87,6 +162,23 @@ function Overview() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="panel flex flex-wrap items-center justify-between gap-4 p-6">
+        <div>
+          <p className="font-display text-lg font-semibold">Open to work in Nairobi or remote</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {profile.email} · {profile.phone} · {profile.location}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <a href={`mailto:${profile.email}`} className="link-cta">
+            Email me
+          </a>
+          <Link to="/resumes" className="link-cta-ghost">
+            All resumes
+          </Link>
         </div>
       </section>
     </div>
