@@ -15,7 +15,10 @@ export const Route = createFileRoute("/projects")({
         property: "og:description",
         content: "Flutter/Dart apps, e-commerce admin systems, and structured programming projects.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/projects" },
     ],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/projects" }],
   }),
   component: Projects,
 });
@@ -38,7 +41,7 @@ function Projects() {
             href={p.link}
             target="_blank"
             rel="noreferrer"
-            className="panel block p-6 transition-colors hover:border-primary"
+            className="panel panel-hover block p-6"
           >
             <h2 className="font-display text-lg font-semibold">{p.name}</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.description}</p>

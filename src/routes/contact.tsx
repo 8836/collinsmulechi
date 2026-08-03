@@ -12,7 +12,10 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:title", content: "Contact — Collins Murakayo Mulechi" },
       { property: "og:description", content: "Data analyst based in Nairobi, Kenya." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/contact" }],
   }),
   component: Contact,
 });
@@ -42,7 +45,7 @@ function Contact() {
             href={l.href}
             target={l.href.startsWith("http") ? "_blank" : undefined}
             rel="noreferrer"
-            className="panel block p-6 transition-colors hover:border-primary"
+            className="panel panel-hover block p-6"
           >
             <p className="label-mono">{l.label}</p>
             <p className="mt-2 font-display text-lg font-semibold">{l.value}</p>

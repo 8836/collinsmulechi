@@ -17,7 +17,10 @@ export const Route = createFileRoute("/resumes")({
         content:
           "Four ATS-friendly resumes: data analyst, virtual assistant, graphic designer/videographer, and scriptwriter.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/resumes" },
     ],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/resumes" }],
   }),
   component: Resumes,
 });
@@ -36,7 +39,7 @@ function Resumes() {
 
       <div className="grid gap-4 md:grid-cols-2">
         {resumeTracks.map((r) => (
-          <article key={r.slug} className="panel flex flex-col p-6">
+          <article key={r.slug} className="panel panel-hover flex flex-col p-6">
             <h2 className="font-display text-lg font-semibold">{r.title}</h2>
             <p className="mt-1 text-sm text-primary">{r.subtitle}</p>
             <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{r.blurb}</p>
@@ -64,7 +67,7 @@ function Resumes() {
       </div>
 
       <section>
-        <h2 className="label-mono">Selected creative work</h2>
+        <h2 className="label-mono rule-heading">Selected creative work</h2>
         <ul className="mt-5 space-y-3">
           {creativeWork.map((w) => (
             <li key={w.name} className="panel p-5">

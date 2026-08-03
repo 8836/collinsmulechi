@@ -15,7 +15,10 @@ export const Route = createFileRoute("/experience")({
         property: "og:description",
         content: "Data reporting, operations coordination, and research documentation roles.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/experience" },
     ],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/experience" }],
   }),
   component: Experience,
 });
@@ -29,7 +32,7 @@ function Experience() {
       </header>
       <ol className="space-y-4">
         {experience.map((job) => (
-          <li key={job.company} className="panel p-6">
+          <li key={job.company} className="panel panel-hover p-6">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h2 className="font-display text-lg font-semibold">{job.role}</h2>
               <span className="font-mono text-xs text-accent">{job.period}</span>
