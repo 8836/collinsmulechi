@@ -12,9 +12,9 @@ export const Route = createFileRoute("/scriptwriter")({
       { property: "og:title", content: track.seo.title },
       { property: "og:description", content: track.seo.description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/scriptwriter" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/scriptwriter" },
     ],
-    links: [{ rel: "canonical", href: "/scriptwriter" }],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/scriptwriter" }],
   }),
   component: () => <TrackPage track={track} />,
 });

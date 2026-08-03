@@ -12,9 +12,9 @@ export const Route = createFileRoute("/virtual-assistant")({
       { property: "og:title", content: track.seo.title },
       { property: "og:description", content: track.seo.description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/virtual-assistant" },
+      { property: "og:url", content: "https://collinsmulechi.lovable.app/virtual-assistant" },
     ],
-    links: [{ rel: "canonical", href: "/virtual-assistant" }],
+    links: [{ rel: "canonical", href: "https://collinsmulechi.lovable.app/virtual-assistant" }],
   }),
   component: () => <TrackPage track={track} />,
 });
