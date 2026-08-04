@@ -127,7 +127,14 @@ export function TrackPage({ track }: { track: Track }) {
             </li>
           ))}
         </ol>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Full history on the one-page resume —{" "}
+          <a href={track.file} download className="text-primary hover:underline">
+            download the {track.jobTitle} version →
+          </a>
+        </p>
       </section>
+
 
       <section className="panel panel-hover p-6">
         <h2 className="label-mono rule-heading">Education</h2>
