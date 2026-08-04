@@ -7,7 +7,7 @@ export const profile = {
   linkedin: "https://linkedin.com/in/collins-murakayo-39022532a",
   github: "https://github.com/8836",
   summary:
-    "Data analyst with 4+ years of experience turning operational records into clean, reportable data across retail, print production, and research settings. I build Excel and Power BI reporting workflows, validate and clean data, monitor inventory and transaction records, and document processes so teams can act on accurate numbers. Currently completing a BSc in Software Engineering, with working knowledge of SQL, Python, and dashboard reporting.",
+    "Data analyst with 4+ years of experience turning operational records into clean, reportable data across retail, print production, and research settings. I build Excel and Power BI reporting workflows, validate and clean data, monitor inventory and transaction records, and document processes so teams can act on accurate numbers. Working knowledge of SQL, Python, and dashboard reporting.",
 };
 
 export const skills = [
@@ -127,20 +127,6 @@ export const projects = [
   },
 ];
 
-export const education = {
-  degree: "BSc, Software Engineering",
-  school: "University of Eastern Africa, Baraton",
-  location: "Nandi County, Kenya",
-  period: "Sep 2018 – Dec 2026 (expected)",
-  coursework: [
-    "Systems Analysis & Design",
-    "Database Systems",
-    "Software Engineering Principles",
-    "Information Systems",
-    "Computer Networks",
-  ],
-};
-
 export const strengths = [
   "Systems thinker with strong operational awareness",
   "Disciplined documentation and reporting standards",
@@ -151,10 +137,10 @@ export const strengths = [
 ];
 
 export const atAGlance = [
-  { value: "4+ yrs", label: "Operational data & reporting experience" },
+  { value: "4+ yrs", label: "Operational data & the team can trust" },
   { value: "4", label: "Roles across retail, print production and research" },
   { value: "4", label: "ATS-ready resume tracks, one verified history" },
-  { value: "BSc", label: "Software Engineering, completing Dec 2026" },
+  { value: "Excel + Power BI", label: "Core reporting and dashboard stack" },
 ];
 
 export const howIWork = [

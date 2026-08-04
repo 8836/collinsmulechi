@@ -25,7 +25,7 @@ export const tracks: Track[] = [
     eyebrow: "Nairobi, Kenya · Open to data analyst roles",
     headline: "I turn messy operational records into reporting people actually trust.",
     intro:
-      "Four-plus years turning retail, print production, and research records into clean, reportable data. I build Excel and Power BI reporting workflows, validate and clean data, monitor inventory and transaction records, and document processes so teams can act on accurate numbers. Currently completing a BSc in Software Engineering.",
+      "Four-plus years turning retail, print production, and research records into clean, reportable data. I build Excel and Power BI reporting workflows, validate and clean data, monitor inventory and transaction records, and document processes so teams can act on accurate numbers.",
     file: "/Collins-Murakayo-Mulechi-Data-Analyst-Resume.pdf",
     capabilities: [
       {
@@ -283,7 +283,7 @@ const extras: Record<string, { niche: string; achievements: string[] }> = {
       "4+ years keeping operational records reportable across retail, print production and research settings.",
       "Maintained daily cash books, sales logs and transaction documentation in reconciled condition.",
       "Monitored inventory movement and supported stock reconciliation, reducing untracked discrepancies.",
-      "Completing a BSc in Software Engineering (Dec 2026) covering database systems and systems analysis.",
+      "Built reporting workflows in Excel and Power BI that turn raw records into decision-ready views.",
     ],
   },
   "virtual-assistant": {

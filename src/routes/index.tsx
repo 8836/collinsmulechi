@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { profile, skills, education, strengths, atAGlance, howIWork } from "../data/resume";
+import { profile, skills, strengths, atAGlance, howIWork } from "../data/resume";
 import { resumeTracks } from "../data/resumes";
 
 const title = "Collins Murakayo Mulechi — Data Analyst in Nairobi";
@@ -32,7 +32,6 @@ export const Route = createFileRoute("/")({
             url: "https://collinsmulechi.lovable.app/",
             address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
             sameAs: [profile.linkedin, profile.github],
-            alumniOf: { "@type": "CollegeOrUniversity", name: education.school },
             knowsAbout: [
               "Data analysis",
               "Microsoft Excel",
@@ -153,36 +152,16 @@ function Overview() {
       </section>
 
 
-      <section className="grid gap-4 md:grid-cols-2">
-        <div className="panel panel-hover p-6">
-          <h2 className="label-mono">Education</h2>
-          <h3 className="mt-3 font-display text-lg font-semibold">{education.degree}</h3>
-          <p className="text-sm text-muted-foreground">
-            {education.school} · {education.location}
-          </p>
-          <p className="mt-1 font-mono text-xs text-accent">{education.period}</p>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {education.coursework.map((c) => (
-              <li
-                key={c}
-                className="rounded-md border border-border px-2.5 py-1 text-xs text-muted-foreground"
-              >
-                {c}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="panel panel-hover p-6">
-          <h2 className="label-mono">Strengths</h2>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            {strengths.map((s) => (
-              <li key={s} className="flex gap-2">
-                <span className="text-primary">—</span>
-                {s}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <section className="panel panel-hover p-6">
+        <h2 className="label-mono rule-heading">Strengths</h2>
+        <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+          {strengths.map((s) => (
+            <li key={s} className="flex gap-2 text-sm text-muted-foreground">
+              <span className="text-primary">—</span>
+              {s}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="panel flex flex-wrap items-center justify-between gap-4 p-6">
