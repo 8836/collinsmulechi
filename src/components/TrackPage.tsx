@@ -27,7 +27,12 @@ export function TrackPage({ track }: { track: Track }) {
       </section>
 
       <section>
-        <h2 className="label-mono rule-heading">What I do</h2>
+        <h2 className="label-mono rule-heading">Services</h2>
+        {track.niche ? (
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Niche ecosystem: <span className="text-foreground">{track.niche}</span>
+          </p>
+        ) : null}
         <div className="mt-5 grid gap-4 md:grid-cols-3">
           {track.capabilities.map((group) => (
             <div key={group.group} className="panel panel-hover p-5">
@@ -40,10 +45,16 @@ export function TrackPage({ track }: { track: Track }) {
             </div>
           ))}
         </div>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Need this on your team?{" "}
+          <a href={`mailto:${profile.email}`} className="text-primary hover:underline">
+            Email me to start a conversation →
+          </a>
+        </p>
       </section>
 
       <section>
-        <h2 className="label-mono rule-heading">Selected work</h2>
+        <h2 className="label-mono rule-heading">Work samples</h2>
         <ul className="mt-5 space-y-3">
           {track.proof.map((w) => (
             <li key={w.name} className="panel panel-hover p-5">
@@ -65,7 +76,33 @@ export function TrackPage({ track }: { track: Track }) {
             </li>
           ))}
         </ul>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Want the detail behind any of these?{" "}
+          <Link to="/contact" className="text-primary hover:underline">
+            Ask me directly →
+          </Link>
+        </p>
       </section>
+
+      {track.achievements ? (
+        <section>
+          <h2 className="label-mono rule-heading">Achievements</h2>
+          <ul className="mt-5 grid gap-3 md:grid-cols-2">
+            {track.achievements.map((a) => (
+              <li key={a} className="panel panel-hover p-5 text-sm leading-relaxed text-muted-foreground">
+                {a}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm text-muted-foreground">
+            References available on request.{" "}
+            <a href={`mailto:${profile.email}`} className="text-primary hover:underline">
+              Request them →
+            </a>
+          </p>
+        </section>
+      ) : null}
+
 
       <section>
         <h2 className="label-mono rule-heading">Relevant experience</h2>
@@ -90,7 +127,14 @@ export function TrackPage({ track }: { track: Track }) {
             </li>
           ))}
         </ol>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Full history on the one-page resume —{" "}
+          <a href={track.file} download className="text-primary hover:underline">
+            download the {track.jobTitle} version →
+          </a>
+        </p>
       </section>
+
 
       <section className="panel panel-hover p-6">
         <h2 className="label-mono rule-heading">Education</h2>

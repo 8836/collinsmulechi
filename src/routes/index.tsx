@@ -102,6 +102,12 @@ function Overview() {
             </Link>
           ))}
         </div>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Not sure which track fits your role?{" "}
+          <a href={`mailto:${profile.email}`} className="text-primary hover:underline">
+            Email me and I'll tell you straight →
+          </a>
+        </p>
       </section>
 
       <section>
@@ -115,7 +121,14 @@ function Overview() {
             </li>
           ))}
         </ol>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Want this applied to your reporting?{" "}
+          <Link to="/contact" className="text-primary hover:underline">
+            Start a conversation →
+          </Link>
+        </p>
       </section>
+
 
       <section>
         <h2 className="label-mono rule-heading">Core skills</h2>
@@ -131,7 +144,14 @@ function Overview() {
             </div>
           ))}
         </div>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Looking for a specific tool or skill?{" "}
+          <a href={`mailto:${profile.email}`} className="text-primary hover:underline">
+            Ask before you shortlist →
+          </a>
+        </p>
       </section>
+
 
       <section className="grid gap-4 md:grid-cols-2">
         <div className="panel panel-hover p-6">

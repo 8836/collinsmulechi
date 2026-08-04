@@ -11,6 +11,8 @@ export type Track = {
   experience: typeof experience;
   proof: { name: string; period: string; description: string; link?: string }[];
   seo: { title: string; description: string };
+  niche?: string;
+  achievements?: string[];
 };
 
 const byCompany = (...companies: string[]) =>
@@ -272,5 +274,53 @@ export const tracks: Track[] = [
     },
   },
 ];
+
+// Niche ecosystem (2–3 complementary services) + verified achievements per track.
+const extras: Record<string, { niche: string; achievements: string[] }> = {
+  "data-analyst": {
+    niche: "Reporting & dashboards · Data cleaning and validation · Operational business systems",
+    achievements: [
+      "4+ years keeping operational records reportable across retail, print production and research settings.",
+      "Maintained daily cash books, sales logs and transaction documentation in reconciled condition.",
+      "Monitored inventory movement and supported stock reconciliation, reducing untracked discrepancies.",
+      "Completing a BSc in Software Engineering (Dec 2026) covering database systems and systems analysis.",
+    ],
+  },
+  "virtual-assistant": {
+    niche: "Executive & admin support · Records and data management · Remote project coordination",
+    achievements: [
+      "Delivered concurrent remote assignments to consistent documentation and accuracy standards for 2.5+ years.",
+      "Coordinated project timelines and client deliverables across sales, production and design teams.",
+      "Introduced workflow tracking methods that improved accountability on client projects.",
+      "Handled confidential financial and operational records without gaps in reconciliation.",
+    ],
+  },
+  "graphic-designer": {
+    niche: "Brand identity systems · Large-format & print production · Promotional video",
+    achievements: [
+      "Two large-scale billboards designed and deployed across Nairobi and Machakos.",
+      "Supermarket-wide interior branding and marketing collateral delivered end to end.",
+      "Production-ready CNC and large-format files prepared for external print partners.",
+      "Promotional music and campaign video produced and published on YouTube and Instagram.",
+    ],
+  },
+  scriptwriter: {
+    niche: "Comedy & skit writing · Branded ad scripts · Content format development",
+    achievements: [
+      "Healthcare awareness comedy ad series written with full scene direction and taglines.",
+      "Interactive street-engagement question bank built with documented brand positioning and flow.",
+      "Promotional music video content scripted and published for online audiences.",
+      "Scripts delivered production-ready so crews can shoot directly from the page.",
+    ],
+  },
+};
+
+for (const track of tracks) {
+  const extra = extras[track.slug];
+  if (extra) {
+    track.niche = extra.niche;
+    track.achievements = extra.achievements;
+  }
+}
 
 export const trackBySlug = (slug: string) => tracks.find((t) => t.slug === slug)!;
