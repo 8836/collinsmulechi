@@ -144,7 +144,14 @@ function Overview() {
             </div>
           ))}
         </div>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Looking for a specific tool or skill?{" "}
+          <a href={`mailto:${profile.email}`} className="text-primary hover:underline">
+            Ask before you shortlist →
+          </a>
+        </p>
       </section>
+
 
       <section className="grid gap-4 md:grid-cols-2">
         <div className="panel panel-hover p-6">
