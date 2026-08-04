@@ -30,8 +30,7 @@ function Projects() {
         <p className="label-mono">Projects</p>
         <h1 className="mt-3 text-3xl font-bold sm:text-4xl">Built and documented on GitHub</h1>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          Software projects developed alongside my Software Engineering degree, using version
-          control and iterative documentation throughout.
+          Software projects developed with version control and iterative documentation throughout.
         </p>
       </header>
       <div className="grid gap-4 md:grid-cols-2">
