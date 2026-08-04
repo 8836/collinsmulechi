@@ -55,9 +55,14 @@ function Projects() {
           </a>
         ))}
       </div>
-      <a href={profile.github} target="_blank" rel="noreferrer" className="link-cta-ghost">
-        Visit GitHub profile
-      </a>
+      <div className="flex flex-wrap items-center gap-3">
+        <a href={profile.github} target="_blank" rel="noreferrer" className="link-cta-ghost">
+          Visit GitHub profile
+        </a>
+        <a href={`mailto:${profile.email}`} className="link-cta">
+          Discuss a project
+        </a>
+      </div>
     </div>
   );
 }
