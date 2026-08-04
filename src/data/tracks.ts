@@ -11,6 +11,8 @@ export type Track = {
   experience: typeof experience;
   proof: { name: string; period: string; description: string; link?: string }[];
   seo: { title: string; description: string };
+  niche?: string;
+  achievements?: string[];
 };
 
 const byCompany = (...companies: string[]) =>
