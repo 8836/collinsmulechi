@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { Track } from "../data/tracks";
-import { profile, education } from "../data/resume";
+import { profile } from "../data/resume";
 
 export function TrackPage({ track }: { track: Track }) {
   return (
@@ -135,15 +135,6 @@ export function TrackPage({ track }: { track: Track }) {
         </p>
       </section>
 
-
-      <section className="panel panel-hover p-6">
-        <h2 className="label-mono rule-heading">Education</h2>
-        <h3 className="mt-3 font-display text-lg font-semibold">{education.degree}</h3>
-        <p className="text-sm text-muted-foreground">
-          {education.school} · {education.location}
-        </p>
-        <p className="mt-1 font-mono text-xs text-accent">{education.period}</p>
-      </section>
 
       <section className="panel flex flex-wrap items-center justify-between gap-4 p-6">
         <div>
