@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { resumeTracks, creativeWork, socials } from "../data/resumes";
+import { GRAPHIC_DESIGN_PORTFOLIO_URL } from "./__root";
 
 
 export const Route = createFileRoute("/resumes")({
@@ -34,6 +35,17 @@ function Resumes() {
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
           Each version is ATS-friendly: single column, standard section headings, plain text, no
           tables or graphics — and all built from the same verified history.
+        </p>
+        <p className="mt-4 text-sm text-muted-foreground">
+          Explore my other work:{" "}
+          <a
+            href={GRAPHIC_DESIGN_PORTFOLIO_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="link-cta-ghost ml-1 inline-flex"
+          >
+            Graphic Design Portfolio <span aria-hidden="true">→</span>
+          </a>
         </p>
       </header>
 

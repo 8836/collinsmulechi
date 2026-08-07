@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { profile, skills, strengths, atAGlance, howIWork } from "../data/resume";
 import { resumeTracks } from "../data/resumes";
+import { GRAPHIC_DESIGN_PORTFOLIO_URL } from "./__root";
 
 const title = "Collins Murakayo Mulechi — Data Analyst in Nairobi";
 const description =
@@ -72,6 +73,17 @@ function Overview() {
             Hire me
           </Link>
         </div>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Looking for my creative side?{" "}
+          <a
+            href={GRAPHIC_DESIGN_PORTFOLIO_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            Graphic Design Portfolio <span aria-hidden="true">→</span>
+          </a>
+        </p>
 
         <dl className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {atAGlance.map((s) => (
