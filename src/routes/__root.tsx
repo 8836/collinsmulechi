@@ -121,6 +121,8 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+export const GRAPHIC_DESIGN_PORTFOLIO_URL = "https://collins-graphicdesign-port.lovable.app/";
+
 const nav = [
   { to: "/", label: "Overview" },
   { to: "/experience", label: "Experience" },
@@ -153,6 +155,14 @@ function RootComponent() {
                   {item.label}
                 </Link>
               ))}
+              <a
+                href={GRAPHIC_DESIGN_PORTFOLIO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
+                Graphic Design Portfolio <span aria-hidden="true">↗</span>
+              </a>
               <Link to="/resumes" className="ml-2 link-cta">
                 Download resumes
               </Link>
@@ -173,6 +183,14 @@ function RootComponent() {
               </a>
               <a className="hover:text-foreground" href={profile.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn
+              </a>
+              <a
+                className="hover:text-foreground"
+                href={GRAPHIC_DESIGN_PORTFOLIO_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Graphic Design Portfolio
               </a>
               <a className="hover:text-foreground" href={profile.github} target="_blank" rel="noreferrer">
                 GitHub
