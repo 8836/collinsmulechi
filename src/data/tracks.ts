@@ -13,6 +13,13 @@ export type Track = {
   seo: { title: string; description: string };
   niche?: string;
   achievements?: string[];
+  gallery?: {
+    title: string;
+    category: string;
+    context: string;
+    image?: string;
+    link?: string;
+  }[];
 };
 
 const byCompany = (...companies: string[]) =>
