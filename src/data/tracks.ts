@@ -13,6 +13,13 @@ export type Track = {
   seo: { title: string; description: string };
   niche?: string;
   achievements?: string[];
+  gallery?: {
+    title: string;
+    category: string;
+    context: string;
+    image?: string;
+    link?: string;
+  }[];
 };
 
 const byCompany = (...companies: string[]) =>
@@ -207,7 +214,47 @@ export const tracks: Track[] = [
       description:
         "Graphic designer and videographer in Nairobi: brand identity, large-format and print production, retail branding, and promotional video.",
     },
+    gallery: [
+      {
+        title: "Nairobi billboard — China Village Hypermarket",
+        category: "Large-format",
+        context:
+          "Large-format billboard artwork designed and prepared for production, deployed along a Nairobi route.",
+      },
+      {
+        title: "Machakos billboard — China Village Hypermarket",
+        category: "Large-format",
+        context:
+          "Second billboard in the same campaign system, adapted for the Machakos site and print partner specs.",
+      },
+      {
+        title: "Supermarket interior branding",
+        category: "Retail branding",
+        context:
+          "Aisle signage, wall graphics and in-store collateral rolled out across the hypermarket floor.",
+      },
+      {
+        title: "CNC & print production files",
+        category: "Production",
+        context:
+          "Cut-ready CNC and large-format files prepared to external partner specifications for signage builds.",
+      },
+      {
+        title: "Social & marketing creatives",
+        category: "Digital",
+        context:
+          "Promotional posts, offer creatives and campaign visuals built on the retail brand system.",
+      },
+      {
+        title: "CKol — Liquid Gold (feat. Kiwado)",
+        category: "Video",
+        context:
+          "Promotional music video content produced and delivered for YouTube and Instagram audiences.",
+        link: "https://youtu.be/f232ZLvTh1o",
+      },
+    ],
   },
+
   {
     slug: "scriptwriter",
     jobTitle: "Scriptwriter",
