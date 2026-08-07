@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { profile, skills, strengths, atAGlance, howIWork } from "../data/resume";
 import { resumeTracks } from "../data/resumes";
+import { GRAPHIC_DESIGN_PORTFOLIO_URL } from "./__root";
 
 const title = "Collins Murakayo Mulechi — Data Analyst in Nairobi";
 const description =
