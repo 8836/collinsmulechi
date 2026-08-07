@@ -53,6 +53,70 @@ export function TrackPage({ track }: { track: Track }) {
         </p>
       </section>
 
+      {track.gallery ? (
+        <section>
+          <h2 className="label-mono rule-heading">Portfolio gallery</h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Brand identity, print production and video — the pieces behind the work samples below.
+          </p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {track.gallery.map((item) => {
+              const inner = (
+                <>
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-secondary">
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center">
+                        <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+                          {item.category}
+                        </span>
+                      </div>
+                    )}
+                    <span className="absolute left-3 top-3 rounded-md bg-background/80 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-accent backdrop-blur">
+                      {item.category}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-sm font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.context}</p>
+                  {item.link ? (
+                    <span className="mt-3 inline-block text-sm text-primary">Watch →</span>
+                  ) : null}
+                </>
+              );
+
+              return item.link ? (
+                <a
+                  key={item.title}
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="panel panel-hover group block p-4"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <article key={item.title} className="panel panel-hover group p-4">
+                  {inner}
+                </article>
+              );
+            })}
+          </div>
+          <p className="mt-5 text-sm text-muted-foreground">
+            Want full-resolution files or the production artwork?{" "}
+            <a href={`mailto:${profile.email}`} className="text-primary hover:underline">
+              Ask for the folder →
+            </a>
+          </p>
+        </section>
+      ) : null}
+
+
       <section>
         <h2 className="label-mono rule-heading">Work samples</h2>
         <ul className="mt-5 space-y-3">
