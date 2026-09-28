@@ -95,7 +95,7 @@ export const tracks: Track[] = [
     eyebrow: "Remote-ready · Administrative & digital operations support",
     headline: "Calendars, inboxes and records handled so the work stays moving.",
     intro:
-      "Administrative and digital operations support built on four-plus years of record keeping, client communication, and remote project coordination. I manage calendars and inboxes, keep confidential records accurate, and document workflows so nothing depends on memory.",
+      "Administrative and digital operations support built on four-plus years of record keeping, client communication, and remote project coordination. I am proficient in Notion, Frame.io, MailerLite, Circle, and calendar management, and I keep confidential records and workflows organised so nothing depends on memory.",
     file: "/Collins-Murakayo-Mulechi-Virtual-Assistant-Resume.pdf",
     capabilities: [
       {
@@ -110,10 +110,12 @@ export const tracks: Track[] = [
       {
         group: "Tools",
         items: [
+          "Notion — workspace and knowledge management",
+          "Frame.io — creative review and feedback",
+          "MailerLite — email campaign support",
+          "Circle — community administration",
           "Google Workspace (Sheets, Docs, Drive)",
           "Microsoft Office (Excel, Word, PowerPoint)",
-          "Remote collaboration and messaging tools",
-          "Document and report preparation",
         ],
       },
       {
@@ -149,7 +151,7 @@ export const tracks: Track[] = [
     seo: {
       title: "Virtual Assistant — Collins Murakayo Mulechi",
       description:
-        "Remote virtual assistant offering calendar and inbox management, client communication, confidential record handling, and project coordination.",
+        "Remote virtual assistant proficient in Notion, Frame.io, MailerLite, Circle, calendar and inbox management, confidential records, and project coordination.",
     },
   },
   {
@@ -334,7 +336,7 @@ const extras: Record<string, { niche: string; achievements: string[] }> = {
     ],
   },
   "virtual-assistant": {
-    niche: "Executive & admin support · Records and data management · Remote project coordination",
+    niche: "Calendar & admin support · Digital workspace management · Remote project coordination",
     achievements: [
       "Delivered concurrent remote assignments to consistent documentation and accuracy standards for 2.5+ years.",
       "Coordinated project timelines and client deliverables across sales, production and design teams.",

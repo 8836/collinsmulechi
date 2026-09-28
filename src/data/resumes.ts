@@ -5,8 +5,8 @@ export const resumeTracks = [
     subtitle: "Business Systems & Digital Operations",
     file: "/Collins-Murakayo-Mulechi-Data-Analyst-Resume.pdf",
     blurb:
-      "Excel and Power BI reporting, data cleaning and validation, SQL fundamentals, KPI tracking, and operational record management.",
-    highlights: ["Excel & Power BI", "SQL / MySQL", "Data validation", "KPI reporting"],
+      "Excel and Power BI reporting, data cleaning and validation, SQL fundamentals, KPI tracking, and digital operations tools.",
+    highlights: ["Excel & Power BI", "SQL / MySQL", "Notion", "KPI reporting"],
   },
   {
     slug: "virtual-assistant",
@@ -14,8 +14,8 @@ export const resumeTracks = [
     subtitle: "Administrative & Digital Operations Support",
     file: "/Collins-Murakayo-Mulechi-Virtual-Assistant-Resume.pdf",
     blurb:
-      "Calendar and inbox management, client communication, confidential record handling, and remote project coordination.",
-    highlights: ["Google Workspace", "MS Office", "Scheduling", "Record keeping"],
+      "Calendar and inbox management, client communication, confidential records, and remote coordination using Notion, Frame.io, MailerLite, and Circle.",
+    highlights: ["Notion & Circle", "Frame.io", "MailerLite", "Calendar management"],
   },
   {
     slug: "graphic-designer",
