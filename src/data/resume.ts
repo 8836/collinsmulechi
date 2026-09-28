@@ -31,6 +31,8 @@ export const skills = [
       "Record management & data entry accuracy",
       "Cross-functional reporting",
       "Google Workspace (Sheets, Docs, Drive)",
+      "Notion, Frame.io, MailerLite & Circle",
+      "Calendar management & scheduling",
     ],
   },
   {
