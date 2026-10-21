@@ -322,6 +322,79 @@ export const tracks: Track[] = [
         "Scriptwriter for comedy skits, branded ad campaigns, and digital storytelling — production-ready scripts with scene direction and taglines.",
     },
   },
+  {
+    slug: "creative-design-virtual-assistant",
+    jobTitle: "Creative Design Virtual Assistant",
+    eyebrow: "Remote-ready · Marketing, entertainment & design support",
+    headline: "Creative production handled — from the calendar to the final asset.",
+    intro:
+      "A combined administrative and creative support role: I manage calendars, inboxes, and confidential records while producing brand, print, social, and video assets for marketing and entertainment teams. Proficient in Notion, Frame.io, MailerLite, and Circle, with remote collaboration experience since 2021.",
+    file: "/Collins-Murakayo-Mulechi-Creative-Design-Virtual-Assistant-Resume.pdf",
+    capabilities: [
+      {
+        group: "Administrative & remote support",
+        items: [
+          "Calendar and inbox management",
+          "Scheduling and meeting coordination",
+          "Client and stakeholder communication",
+          "Confidential records and data entry accuracy",
+          "Deadline and deliverable tracking",
+        ],
+      },
+      {
+        group: "Creative & content production",
+        items: [
+          "Brand identity and visual systems",
+          "Social media and campaign creatives",
+          "Print and large-format production files",
+          "Promotional and short-form video editing",
+          "Storyboarding and content planning",
+        ],
+      },
+      {
+        group: "Tools & platforms",
+        items: [
+          "Notion, Frame.io, MailerLite, Circle",
+          "Google Workspace & Microsoft Office",
+          "Adobe Illustrator & Photoshop, Canva",
+          "CapCut & DaVinci Resolve",
+          "YouTube and Instagram delivery",
+        ],
+      },
+    ],
+    experience: byCompany(
+      "China Village Hypermarket",
+      "Bevoch Family Graphics",
+      "Pari Graphics Ltd",
+      "Writing Specialists",
+    ),
+    proof: [
+      {
+        name: "China Village Hypermarket billboards & retail branding",
+        period: "2025",
+        description:
+          "Two large-scale billboards designed and deployed across Nairobi and Machakos, plus supermarket-wide interior branding — coordinated alongside campaign timelines and print deliverables.",
+      },
+      {
+        name: "Ad Skit Series — Healthcare Comedy Campaign",
+        period: "Oct – Nov 2025",
+        description:
+          "Comedic ad scripts pairing humour with healthcare awareness, written with scene directions and taglines for production teams.",
+      },
+      {
+        name: "CKol — Liquid Gold (feat. Kiwado)",
+        period: "2021 – Present",
+        description:
+          "Promotional video content scripted, produced, and delivered for YouTube and Instagram audiences.",
+        link: "https://youtu.be/f232ZLvTh1o",
+      },
+    ],
+    seo: {
+      title: "Creative Design Virtual Assistant — Collins Murakayo Mulechi",
+      description:
+        "Creative design virtual assistant for marketing, entertainment, and design teams: calendar and inbox management, Notion, Frame.io, MailerLite, Circle, brand and social creatives, and promotional video.",
+    },
+  },
 ];
 
 // Niche ecosystem (2–3 complementary services) + verified achievements per track.

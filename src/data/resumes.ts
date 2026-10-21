@@ -35,6 +35,15 @@ export const resumeTracks = [
       "Comedy skits, branded ad scripts, and digital campaign storytelling, written production-ready with scene direction and taglines.",
     highlights: ["Skit & ad scripts", "Storyboarding", "Branded content", "Video production"],
   },
+  {
+    slug: "creative-design-virtual-assistant",
+    title: "Creative Design Virtual Assistant",
+    subtitle: "Marketing, Entertainment & Design Support",
+    file: "/Collins-Murakayo-Mulechi-Creative-Design-Virtual-Assistant-Resume.pdf",
+    blurb:
+      "Combined administrative and creative support: calendar and inbox management, confidential records, and client communication alongside brand, print, social, and video production for marketing and entertainment teams.",
+    highlights: ["Notion & Frame.io", "MailerLite & Circle", "Adobe & Canva", "Calendar management"],
+  },
 ];
 
 export const creativeWork = [
