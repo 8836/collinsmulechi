@@ -141,7 +141,7 @@ export const strengths = [
 export const atAGlance = [
   { value: "4+ yrs", label: "Operational data & the team can trust" },
   { value: "4", label: "Roles across retail, print production and research" },
-  { value: "4", label: "ATS-ready resume tracks, one verified history" },
+  { value: "5", label: "ATS-ready resume tracks, one verified history" },
   { value: "Excel + Power BI", label: "Core reporting and dashboard stack" },
 ];
 

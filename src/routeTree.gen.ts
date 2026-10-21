@@ -17,6 +17,7 @@ import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as GraphicDesignerRouteImport } from './routes/graphic-designer'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as DataAnalystRouteImport } from './routes/data-analyst'
+import { Route as CreativeDesignVirtualAssistantRouteImport } from './routes/creative-design-virtual-assistant'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -60,6 +61,12 @@ const DataAnalystRoute = DataAnalystRouteImport.update({
   path: '/data-analyst',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CreativeDesignVirtualAssistantRoute =
+  CreativeDesignVirtualAssistantRouteImport.update({
+    id: '/creative-design-virtual-assistant',
+    path: '/creative-design-virtual-assistant',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -74,6 +81,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/creative-design-virtual-assistant': typeof CreativeDesignVirtualAssistantRoute
   '/data-analyst': typeof DataAnalystRoute
   '/experience': typeof ExperienceRoute
   '/graphic-designer': typeof GraphicDesignerRoute
@@ -86,6 +94,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/creative-design-virtual-assistant': typeof CreativeDesignVirtualAssistantRoute
   '/data-analyst': typeof DataAnalystRoute
   '/experience': typeof ExperienceRoute
   '/graphic-designer': typeof GraphicDesignerRoute
@@ -99,6 +108,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/creative-design-virtual-assistant': typeof CreativeDesignVirtualAssistantRoute
   '/data-analyst': typeof DataAnalystRoute
   '/experience': typeof ExperienceRoute
   '/graphic-designer': typeof GraphicDesignerRoute
@@ -113,6 +123,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
+    | '/creative-design-virtual-assistant'
     | '/data-analyst'
     | '/experience'
     | '/graphic-designer'
@@ -125,6 +136,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contact'
+    | '/creative-design-virtual-assistant'
     | '/data-analyst'
     | '/experience'
     | '/graphic-designer'
@@ -137,6 +149,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contact'
+    | '/creative-design-virtual-assistant'
     | '/data-analyst'
     | '/experience'
     | '/graphic-designer'
@@ -150,6 +163,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  CreativeDesignVirtualAssistantRoute: typeof CreativeDesignVirtualAssistantRoute
   DataAnalystRoute: typeof DataAnalystRoute
   ExperienceRoute: typeof ExperienceRoute
   GraphicDesignerRoute: typeof GraphicDesignerRoute
@@ -218,6 +232,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DataAnalystRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/creative-design-virtual-assistant': {
+      id: '/creative-design-virtual-assistant'
+      path: '/creative-design-virtual-assistant'
+      fullPath: '/creative-design-virtual-assistant'
+      preLoaderRoute: typeof CreativeDesignVirtualAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -238,6 +259,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  CreativeDesignVirtualAssistantRoute: CreativeDesignVirtualAssistantRoute,
   DataAnalystRoute: DataAnalystRoute,
   ExperienceRoute: ExperienceRoute,
   GraphicDesignerRoute: GraphicDesignerRoute,
