@@ -10,13 +10,13 @@ export const Route = createFileRoute("/resumes")({
       {
         name: "description",
         content:
-          "Download ATS-friendly resumes for data analysis, virtual assistance, graphic design and videography, and scriptwriting roles.",
+          "Five ATS-friendly resumes: data analyst, virtual assistant, graphic designer/videographer, scriptwriter, and creative design virtual assistant.",
       },
       { property: "og:title", content: "Resumes — Collins Murakayo Mulechi" },
       {
         property: "og:description",
         content:
-          "Four ATS-friendly resumes: data analyst, virtual assistant, graphic designer/videographer, and scriptwriter.",
+          "Five ATS-friendly resumes: data analyst, virtual assistant, graphic designer/videographer, scriptwriter, and creative design virtual assistant.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://collinsmulechi.lovable.app/resumes" },
@@ -31,7 +31,7 @@ function Resumes() {
     <div className="space-y-14">
       <header>
         <p className="label-mono">Resumes</p>
-        <h1 className="mt-3 text-3xl font-bold sm:text-4xl">Four tracks, one career</h1>
+        <h1 className="mt-3 text-3xl font-bold sm:text-4xl">Five tracks, one career</h1>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
           Each version is ATS-friendly: single column, standard section headings, plain text, no
           tables or graphics — and all built from the same verified history.
