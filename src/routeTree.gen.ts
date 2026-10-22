@@ -9,56 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as VirtualAssistantRouteImport } from './routes/virtual-assistant'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ScriptwriterRouteImport } from './routes/scriptwriter'
-import { Route as ResumesRouteImport } from './routes/resumes'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as GraphicDesignerRouteImport } from './routes/graphic-designer'
-import { Route as ExperienceRouteImport } from './routes/experience'
-import { Route as DataAnalystRouteImport } from './routes/data-analyst'
-import { Route as CreativeDesignVirtualAssistantRouteImport } from './routes/creative-design-virtual-assistant'
-import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CreativeDesignVirtualAssistantRouteImport } from './routes/creative-design-virtual-assistant'
+import { Route as DataAnalystRouteImport } from './routes/data-analyst'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as GraphicDesignerRouteImport } from './routes/graphic-designer'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ResumesRouteImport } from './routes/resumes'
+import { Route as ScriptwriterRouteImport } from './routes/scriptwriter'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as VirtualAssistantRouteImport } from './routes/virtual-assistant'
 
-const VirtualAssistantRoute = VirtualAssistantRouteImport.update({
-  id: '/virtual-assistant',
-  path: '/virtual-assistant',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ScriptwriterRoute = ScriptwriterRouteImport.update({
-  id: '/scriptwriter',
-  path: '/scriptwriter',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResumesRoute = ResumesRouteImport.update({
-  id: '/resumes',
-  path: '/resumes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GraphicDesignerRoute = GraphicDesignerRouteImport.update({
-  id: '/graphic-designer',
-  path: '/graphic-designer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExperienceRoute = ExperienceRouteImport.update({
-  id: '/experience',
-  path: '/experience',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DataAnalystRoute = DataAnalystRouteImport.update({
-  id: '/data-analyst',
-  path: '/data-analyst',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CreativeDesignVirtualAssistantRoute =
@@ -67,14 +37,44 @@ const CreativeDesignVirtualAssistantRoute =
     path: '/creative-design-virtual-assistant',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const DataAnalystRoute = DataAnalystRouteImport.update({
+  id: '/data-analyst',
+  path: '/data-analyst',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GraphicDesignerRoute = GraphicDesignerRouteImport.update({
+  id: '/graphic-designer',
+  path: '/graphic-designer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResumesRoute = ResumesRouteImport.update({
+  id: '/resumes',
+  path: '/resumes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScriptwriterRoute = ScriptwriterRouteImport.update({
+  id: '/scriptwriter',
+  path: '/scriptwriter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VirtualAssistantRoute = VirtualAssistantRouteImport.update({
+  id: '/virtual-assistant',
+  path: '/virtual-assistant',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -176,67 +176,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/virtual-assistant': {
-      id: '/virtual-assistant'
-      path: '/virtual-assistant'
-      fullPath: '/virtual-assistant'
-      preLoaderRoute: typeof VirtualAssistantRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/scriptwriter': {
-      id: '/scriptwriter'
-      path: '/scriptwriter'
-      fullPath: '/scriptwriter'
-      preLoaderRoute: typeof ScriptwriterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resumes': {
-      id: '/resumes'
-      path: '/resumes'
-      fullPath: '/resumes'
-      preLoaderRoute: typeof ResumesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/graphic-designer': {
-      id: '/graphic-designer'
-      path: '/graphic-designer'
-      fullPath: '/graphic-designer'
-      preLoaderRoute: typeof GraphicDesignerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/experience': {
-      id: '/experience'
-      path: '/experience'
-      fullPath: '/experience'
-      preLoaderRoute: typeof ExperienceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/data-analyst': {
-      id: '/data-analyst'
-      path: '/data-analyst'
-      fullPath: '/data-analyst'
-      preLoaderRoute: typeof DataAnalystRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/creative-design-virtual-assistant': {
-      id: '/creative-design-virtual-assistant'
-      path: '/creative-design-virtual-assistant'
-      fullPath: '/creative-design-virtual-assistant'
-      preLoaderRoute: typeof CreativeDesignVirtualAssistantRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -246,11 +190,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/creative-design-virtual-assistant': {
+      id: '/creative-design-virtual-assistant'
+      path: '/creative-design-virtual-assistant'
+      fullPath: '/creative-design-virtual-assistant'
+      preLoaderRoute: typeof CreativeDesignVirtualAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data-analyst': {
+      id: '/data-analyst'
+      path: '/data-analyst'
+      fullPath: '/data-analyst'
+      preLoaderRoute: typeof DataAnalystRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/graphic-designer': {
+      id: '/graphic-designer'
+      path: '/graphic-designer'
+      fullPath: '/graphic-designer'
+      preLoaderRoute: typeof GraphicDesignerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resumes': {
+      id: '/resumes'
+      path: '/resumes'
+      fullPath: '/resumes'
+      preLoaderRoute: typeof ResumesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scriptwriter': {
+      id: '/scriptwriter'
+      path: '/scriptwriter'
+      fullPath: '/scriptwriter'
+      preLoaderRoute: typeof ScriptwriterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/virtual-assistant': {
+      id: '/virtual-assistant'
+      path: '/virtual-assistant'
+      fullPath: '/virtual-assistant'
+      preLoaderRoute: typeof VirtualAssistantRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
